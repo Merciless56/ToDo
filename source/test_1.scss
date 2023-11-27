@@ -1,0 +1,104 @@
+@import "../css/cleanstyle.css";
+body {
+  background-color: #066acd;
+  height: 100vh;
+}
+.container {
+  width: 40%;
+  min-width: 450px;
+  position: absolute;
+  min-height: 100px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background: white;
+  border-radius: 10px;
+}
+#formElem {
+  padding: 20px;
+  .error {
+    transition: 1s;
+    box-shadow: 0px 0px 10px 1px red;
+  }
+  input[type="text"] {
+    width: 75%;
+    height: 45px;
+    font-family: ‘Poppins’, sans-serif;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+
+    &:focus {
+      outline: none;
+      border-color: #0d75ec;
+    }
+  }
+
+  button {
+    position: relative;
+    float: right;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: #0d75ec;
+    border: none;
+    color: #ffffff;
+    outline: none;
+  }
+}
+
+#table {
+  background-color: #ffffff;
+  padding: 20px 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+  .task {
+    background-color: #c5e1e6;
+    height: 50px;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #939697;
+    cursor: pointer;
+    .status {
+      position: absolute;
+      left: calc(100% - 200px);
+      border-radius: 5px;
+      padding: 4px;
+      background-color: rgb(212, 174, 68);
+
+    }
+    .isDone{
+      background-color: rgb(68, 212, 188);
+    }
+    .isCheck{
+      background-color: rgb(68, 212, 188);
+    }
+    .delete {
+      display: flex;
+      background-color: #0a2ea4;
+      height: 100%;
+      width: 40px;
+      border-radius: 5px;
+      border: none;
+      justify-content: center;
+      align-items: center;
+      .icon {
+        content: url(../icon_delete.svg);
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
